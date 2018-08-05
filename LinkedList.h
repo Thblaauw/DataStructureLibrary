@@ -3,7 +3,7 @@
 
 #include "Node.h"
 
-template<class T>
+template<typename T>
 class LinkedList {
 	
 private:
@@ -19,7 +19,7 @@ public:
 	LinkedList(int);
 	~LinkedList();
 
-	LinkedList<T>& add(T&);
+	LinkedList<T>& insert(const T&);
 	LinkedList<T>& pop();
 	LinkedList<T>& remove(T&);
 

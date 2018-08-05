@@ -1,9 +1,7 @@
-﻿  LinkedList.cpp
-  Generating Code...
-  Compiling...
+﻿  BInaryTree.cpp
+  LinkedList.cpp
+  Node.cpp
+  Rectangle.cpp
   Source.cpp
   Generating Code...
-  Skipping... (no relevant changes detected)
-  Node.cpp
-  DataStructureLibrary.vcxproj -> c:\users\thomasuser\documents\visual studio 2015\Projects\DataStructureLibrary\Debug\DataStructureLibrary.exe
-  DataStructureLibrary.vcxproj -> c:\users\thomasuser\documents\visual studio 2015\Projects\DataStructureLibrary\Debug\DataStructureLibrary.pdb (Partial PDB)
+  DataStructureLibrary.vcxproj -> E:\GitRepos\DataStructure\DataStructureLibrary\Debug\DataStructureLibrary.exe

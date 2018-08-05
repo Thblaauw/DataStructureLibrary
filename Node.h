@@ -5,13 +5,13 @@ template<class T>
 class Node{
 
 private:
-	T *data;
+	const T *data;
 
 	Node<T>* nextPtr;
 	Node<T>* prevPtr;
 public:
 	Node();
-	Node(T&);
+	Node(const T&);
 	~Node();
 
 	void setNextNode(Node<T>*);
@@ -21,9 +21,11 @@ public:
 	Node<T>* getPrevNode();
 
 	void setData(T);
-	T& getData();
+	const T& getData();
 	void print();
 };
+
+
 #include "Node.cpp"
 
 #endif // !NODE_H

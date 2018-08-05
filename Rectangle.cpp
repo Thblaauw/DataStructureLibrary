@@ -56,7 +56,10 @@ int Rectangle::compareTo(const Rectangle& r)const {
 	if (this->isEqual(r))
 		return 0;
 
-	else if(this->getArea() > r.getArea())
+	else if (this->getArea() > r.getArea())
+		return 1;
+	else
+		return -1;
 }
 
 #endif

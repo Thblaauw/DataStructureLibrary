@@ -12,15 +12,15 @@ Node<T>::Node() {
 }
 
 template<class T>
-Node<T>::Node(T& info) {
-	this->data = &info;
+Node<T>::Node(const T& info): data(&info){
+	//this->data = &info;
 	this->nextPtr = nullptr;
 	this->prevPtr = nullptr;
 }
 
 template<class T>
 Node<T>::~Node() {
-	delete this->data;
+	//delete this->data;
 	delete this->nextPtr;
 	delete this->prevPtr;
 }
@@ -51,7 +51,7 @@ void Node<T>::setData(T info) {
 }
 
 template<class T>
-T& Node<T>::getData() {
+const T& Node<T>::getData(){
 	return *data;
 }
 template<class T>

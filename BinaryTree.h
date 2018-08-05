@@ -1,6 +1,8 @@
 #ifndef BINARY_TREE_CPP
 #define BINARY_TREE_CPP
 
+#include "Node.h"
+
 template <class T>
 class BinaryTree{
 
@@ -10,9 +12,14 @@ public:
 	BinaryTree();
 	~BinaryTree();
 
-	BinaryTree<T>& add(T&);
-	BinaryTree<T>& remove(T&);
+	bool insert(const T&);
+	BinaryTree<T>& remove(const T&);
 	bool isEmpty();
-	bool conains(T&);
-}
+	bool contains(T&);
+
+protected:
+	void in_order_traverse(Node<T>& node, void function(Node<T>& n));
+};
+
+#include "BinaryTree.cpp"
 #endif
