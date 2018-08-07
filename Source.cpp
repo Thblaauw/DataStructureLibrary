@@ -2,6 +2,7 @@
 #include "Node.h"
 #include "LinkedList.h"
 #include "BinaryTree.h"
+#include "HashTable.h"
 
 int main() {
 
@@ -15,11 +16,12 @@ int main() {
 	list->pop();
 	list->printList();*/
 
+	LinkedList<Rectangle> *list = (new LinkedList<Rectangle>);
+
 	int a = 2, b = 1, c = 3;
 	BinaryTree<int> *btree = new BinaryTree<int>;
 	btree->insert(a);
 	btree->insert(3);
-	btree->remove(3);
 
 	system("pause");
 	return 0;

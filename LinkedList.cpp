@@ -3,11 +3,24 @@
 
 #include "LinkedList.h"
 
+/**
+	Contructor of the linked list
+
+	@param void
+	@return void
+*/
 template<typename T>
 LinkedList<T>::LinkedList(): head(nullptr), tail(nullptr), behavior(0) {
 	//Standart behavior is a queue;
 }
+/**
+	Constructor that sets the behavior of the linked list:
+		0 - behaves as a queue
+		1 - behaves as a stack
 
+	@param int
+	@return void
+*/
 template<typename T>
 LinkedList<T>::LinkedList(int b): head(nullptr), tail(nullptr), behavior(b) {
 }
@@ -22,6 +35,12 @@ LinkedList<T>::~LinkedList() {
 	}
 }
 
+/**
+	Inserts an item to the linked according to proper behavior
+
+	@param Reference to the item to be added
+	@return Reference to the linked list
+*/
 template<typename T>
 LinkedList<T>& LinkedList<T>::insert(const T& data) {
 
@@ -40,6 +59,12 @@ LinkedList<T>& LinkedList<T>::insert(const T& data) {
 	return *(this);
 }
 
+/**
+	Pop the linked list according to proper behavior
+
+	@param void
+	@return
+*/
 template<typename T>
 LinkedList<T>& LinkedList<T>::pop() {
 
@@ -60,7 +85,12 @@ LinkedList<T>& LinkedList<T>::pop() {
 	return *(this);
 }
 
+/**
+	Sorts the linked list
 
+	@param void
+	@return void
+*/
 template<typename T>
 void LinkedList<T>::sort() {
 	Node<T> newHead = nullptr;
@@ -70,17 +100,39 @@ void LinkedList<T>::sort() {
 	
 }
 
+/**
+	Sets the behavior of the linked list on run-time
+		0 - behaves as a queue
+		1 - behaves as a stack
+
+	@param int
+	@return void
+*/
 template<typename T>
 void LinkedList<T>::setBehavior(int b) {
 	if(b == 0 || b == 1)
 		this->behavior = b;
 }
 
+/**
+	Gets the behavior of the linked list on run-time
+		0 - behaves as a queue
+		1 - behaves as a stack
+
+	@param void
+	@return int
+*/
 template<typename T>
 int LinkedList<T>::getBehavior() {
 	return this->behavior;
 }
 
+/**
+	Prints the whole list sequentially. Objects stored must have a print function
+
+	@param void
+	@return void
+*/
 template<typename T>
 void LinkedList<T>::printList() {
 	Node<T> *iterator;

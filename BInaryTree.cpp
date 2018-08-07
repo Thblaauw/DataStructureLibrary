@@ -20,7 +20,7 @@ BinaryTree<T>::BinaryTree() {
 	@return The binary tree
 */
 template <class T>
-bool BinaryTree<T>::insert(const T& data) {
+BinaryTree<T>& BinaryTree<T>::insert(const T& data) {
 	/*
 		This function will consider the "nextPtr" of the done to be bigger than the node
 		and will consider the "prevPtr" of the node to be smaller than the node
@@ -28,7 +28,7 @@ bool BinaryTree<T>::insert(const T& data) {
 	if (root == nullptr ) {
 		Node<T> *item_to_be_added = new Node<T>(data);
 		this->root = item_to_be_added;
-		return true;
+		return *this;
 	}
 
 	Node<T> *item_to_be_added = new Node<T>(data);
@@ -51,12 +51,11 @@ bool BinaryTree<T>::insert(const T& data) {
 				iterator = iterator->getPrevNode(); //moves to the left
 		}
 		else // it is equal, so it already contains
-			return true;	
+			return *this;	
 	}
 
-	return true;
+	return *this;
 }
-
 
 /**
 	Remove the node that contains the data passed, re-organize the treeand return the binary tree to allow cascading
@@ -177,9 +176,14 @@ void BinaryTree<T>::in_order_traverse(Node<T>& node, void function(Node<T>& n)){
 */
 template <class T>
 BinaryTree<T>::~BinaryTree() {
-	in_order_traverse(root, ~Node<T>());
+	//TODO: Fix the call of a function. Maybe it hs to be public
+	//in_order_traverse(root, del_node);
 }
 
+template <class T>
+void BinaryTree<T>::del_node(Node<T>& n) {
+	delete n;
+}
 #endif // BINARY_TREE
 
 
