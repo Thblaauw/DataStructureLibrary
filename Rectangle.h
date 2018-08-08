@@ -11,7 +11,7 @@ public:
 	Rectangle();
 	Rectangle(double, double);
 
-	void setLength(double);
+	void setLength(const double);
 	double getLength()const;
 
 	void setWidth(double);

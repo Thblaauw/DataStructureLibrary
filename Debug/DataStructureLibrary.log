@@ -1,7 +1,9 @@
 ﻿  BInaryTree.cpp
+  HashNode.cpp
   LinkedList.cpp
   Node.cpp
   Rectangle.cpp
   Source.cpp
   Generating Code...
+e:\gitrepos\datastructure\datastructurelibrary\linkedlist.cpp(137): warning C4715: 'LinkedList<int>::getNode': not all control paths return a value
   DataStructureLibrary.vcxproj -> E:\GitRepos\DataStructure\DataStructureLibrary\Debug\DataStructureLibrary.exe

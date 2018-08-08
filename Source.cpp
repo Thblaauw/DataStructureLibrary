@@ -1,8 +1,7 @@
 #include "Rectangle.h"
-#include "Node.h"
-#include "LinkedList.h"
-#include "BinaryTree.h"
-#include "HashTable.h"
+#include "DataStructures\LinkedList\LinkedList.h"
+#include "DataStructures\Node\Node.h"
+#include "DataStructures\BinaryTree\BinaryTree.h"
 
 int main() {
 
@@ -16,7 +15,13 @@ int main() {
 	list->pop();
 	list->printList();*/
 
-	LinkedList<Rectangle> *list = (new LinkedList<Rectangle>);
+	Node<Rectangle> *n = new Node<Rectangle>(*(new Rectangle(2.2, 3.0)));
+	n->getData().setLength(2.5);
+
+	LinkedList<int> *list = (new LinkedList<int>);
+	list->insert(1);
+	list->insert(2);
+	list->remove(2);
 
 	int a = 2, b = 1, c = 3;
 	BinaryTree<int> *btree = new BinaryTree<int>;

@@ -110,17 +110,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BInaryTree.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="DataStructures\BinaryTree\BInaryTree.cpp" />
+    <ClCompile Include="DataStructures\HashNode\HashNode.cpp" />
+    <ClCompile Include="DataStructures\LinkedList\LinkedList.cpp" />
+    <ClCompile Include="DataStructures\Node\Node.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h" />
-    <ClInclude Include="HashTable.h" />
-    <ClInclude Include="LinkedList.h" />
-    <ClInclude Include="Node.h" />
+    <ClInclude Include="DataStructures\BinaryTree\BinaryTree.h" />
+    <ClInclude Include="DataStructures\HashNode\HashNode.h" />
+    <ClInclude Include="DataStructures\HashTable\HashTable.h" />
+    <ClInclude Include="DataStructures\LinkedList\LinkedList.h" />
+    <ClInclude Include="DataStructures\Node\Node.h" />
     <ClInclude Include="Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

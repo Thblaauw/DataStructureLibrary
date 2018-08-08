@@ -14,7 +14,7 @@ Rectangle::Rectangle(double len, double wid) {
 	width = wid;
 }
 
-void Rectangle::setLength(double len) {
+void Rectangle::setLength(const double len) {
 	length = len;
 }
 double Rectangle::getLength()const{
