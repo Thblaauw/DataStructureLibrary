@@ -27,6 +27,7 @@ int main() {
 	BinaryTree<int> *btree = new BinaryTree<int>;
 	btree->insert(a);
 	btree->insert(3);
+	delete btree;
 
 	system("pause");
 	return 0;

@@ -1,7 +1,7 @@
 #ifndef BINARY_TREE_CPP
 #define BINARY_TREE_CPP
 
-#include "Node.h"
+#include "../Node/Node.h"
 
 template <class T>
 class BinaryTree{
@@ -44,9 +44,15 @@ public:
 	*/
 	bool contains(T&);
 
+	void in_order_traverse(void function(Node<T>* n)) const;
+	void post_order_traverse(void function(Node<T>* n)) const;
+	void pre_order_traverse(void function(Node<T>* n)) const;
+
 protected:
-	void in_order_traverse(Node<T>& node, void function(Node<T>& n));
-	void del_node(Node<T>& n);
+	void in_order_traverse_helper(Node<T>* node, void function(Node<T>* n)) const ;
+	void post_order_traverse_helper(Node<T>* node, void function(Node<T>* n)) const;
+	void pre_order_traverse_helper(Node<T>* node, void function(Node<T>* n)) const;
+	static void del_node(Node<T>* n);
 };
 
 #include "BinaryTree.cpp"

@@ -154,18 +154,90 @@ bool BinaryTree<T>::isEmpty() {
 	Helper function that iterates the binary tree recursively and executes any fucntion that returns void and
 	takes a Node as parameter in every node of the binary tree. 
 
-	@param void function(Node<T>&)
-	@return the binary tree
+	@param pointer Node<T>, void function(Node<T>*)
+	@return void
 */
 template <class T>
-void BinaryTree<T>::in_order_traverse(Node<T>& node, void function(Node<T>& n)){
+void BinaryTree<T>::in_order_traverse_helper(Node<T>* node, void function(Node<T>* n)) const{
 	if (node == nullptr)
 		return;
 	else {
-		in_order_traverse(node->getPrevNode(), void function(Node<T>&));
+		in_order_traverse(node->getPrevNode(), function);
 		function(node);
-		in_order_traverse(node->getNextNode(), void function(Node<T>&));
+		in_order_traverse(node->getNextNode(), function);
 	}
+}
+
+/**
+	Helper function that iterates the binary tree recursively and executes any fucntion that returns void and
+	takes a Node as parameter in every node of the binary tree.
+
+	@param pointer Node<T>, void function(Node<T>*)
+	@return void
+*/
+template <class T>
+void BinaryTree<T>::post_order_traverse_helper(Node<T>* node, void function(Node<T>* n)) const {
+	if (node == nullptr)
+		return;
+	else {
+		post_order_traverse(node->getPrevNode(), function);
+		post_order_traverse(node->getNextNode(), function);
+		function(node);
+	}
+}
+
+/**
+	Helper function that iterates the binary tree recursively and executes any fucntion that returns void and
+	takes a Node as parameter in every node of the binary tree.
+
+	@param pointer to Node<T>, void function(Node<T>*)
+	@return void
+*/
+template <class T>
+void BinaryTree<T>::pre_order_traverse_helper(Node<T>* node, void function(Node<T>* n)) const {
+	if (node == nullptr)
+		return;
+	else {
+		function(node);
+		pre_order_traverse(node->getPrevNode(), function);
+		pre_order_traverse(node->getNextNode(), function);
+	}
+}
+
+/**
+	Iterates the binary tree recursively and executes any fucntion that returns void and
+	takes a Node as parameter in every node of the binary tree.
+
+	@param  void function(Node<T>*)
+	@return void
+*/
+template <class T>
+void BinaryTree<T>::in_order_traverse(void function(Node<T>* n)) const {
+	this->in_order_traverse_helper(function);
+}
+
+/**
+	Iterates the binary tree recursively and executes any fucntion that returns void and
+	takes a Node as parameter in every node of the binary tree.
+
+	@param  void function(Node<T>*)
+	@return void
+*/
+template <class T>
+void BinaryTree<T>::post_order_traverse(void function(Node<T>* n)) const {
+	this->post_order_traverse_helper;
+}
+
+/**
+	Iterates the binary tree recursively and executes any fucntion that returns void and
+	takes a Node as parameter in every node of the binary tree.
+
+	@param  void function(Node<T>*)
+	@return void
+*/
+template <class T>
+void BinaryTree<T>::pre_order_traverse(void function(Node<T>* n)) const {
+	this->pre_order_traverse;
 }
 
 /**
@@ -177,11 +249,11 @@ void BinaryTree<T>::in_order_traverse(Node<T>& node, void function(Node<T>& n)){
 template <class T>
 BinaryTree<T>::~BinaryTree() {
 	//TODO: Fix the call of a function. Maybe it hs to be public
-	//in_order_traverse(root, del_node);
+	BinaryTree<T>::post_order_traverse(root, (this->del_node));
 }
 
 template <class T>
-void BinaryTree<T>::del_node(Node<T>& n) {
+void BinaryTree<T>::del_node(Node<T>* n) {
 	delete n;
 }
 #endif // BINARY_TREE
