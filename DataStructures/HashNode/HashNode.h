@@ -9,14 +9,23 @@ private:
 	const Value* value;
 
 public:
+	//---------------------------------
+	//		Constructors and Destructors
+	//---------------------------------
 	HashNode(const Key&, const Value&);
 	~HashNode();
 
+	//---------------------------------
+	//		Key - Getters and Setters
+	//---------------------------------
 	Key& get_key();
 	HashNode& set_key(const Key&);
 
+	//---------------------------------
+	//		Value - Getters and Setters
+	//---------------------------------
 	Value& get_value();
-	HashNode& set_key(const Value&);
+	HashNode& set_value(const Value&);
 	
 };
 

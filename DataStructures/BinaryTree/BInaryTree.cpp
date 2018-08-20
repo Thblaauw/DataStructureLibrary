@@ -180,8 +180,8 @@ void BinaryTree<T>::post_order_traverse_helper(Node<T>* node, void function(Node
 	if (node == nullptr)
 		return;
 	else {
-		post_order_traverse(node->getPrevNode(), function);
-		post_order_traverse(node->getNextNode(), function);
+		post_order_traverse_helper(node->getPrevNode(), function);
+		post_order_traverse_helper(node->getNextNode(), function);
 		function(node);
 	}
 }
@@ -199,8 +199,8 @@ void BinaryTree<T>::pre_order_traverse_helper(Node<T>* node, void function(Node<
 		return;
 	else {
 		function(node);
-		pre_order_traverse(node->getPrevNode(), function);
-		pre_order_traverse(node->getNextNode(), function);
+		pre_order_traverse_helper(node->getPrevNode(), function);
+		pre_order_traverse_helper(node->getNextNode(), function);
 	}
 }
 
@@ -249,7 +249,7 @@ void BinaryTree<T>::pre_order_traverse(void function(Node<T>* n)) const {
 template <class T>
 BinaryTree<T>::~BinaryTree() {
 	//TODO: Fix the call of a function. Maybe it hs to be public
-	BinaryTree<T>::post_order_traverse(root, (this->del_node));
+	BinaryTree<T>::post_order_traverse_helper(root, (this->del_node));
 }
 
 template <class T>
