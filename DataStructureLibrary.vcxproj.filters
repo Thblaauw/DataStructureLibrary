@@ -33,6 +33,9 @@
     <ClCompile Include="DataStructures\Node\Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DataStructures\HashTable\HashTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructures\BinaryTree\BinaryTree.h">

@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="DataStructures\BinaryTree\BInaryTree.cpp" />
     <ClCompile Include="DataStructures\HashNode\HashNode.cpp" />
+    <ClCompile Include="DataStructures\HashTable\HashTable.cpp" />
     <ClCompile Include="DataStructures\LinkedList\LinkedList.cpp" />
     <ClCompile Include="DataStructures\Node\Node.cpp" />
     <ClCompile Include="Rectangle.cpp" />

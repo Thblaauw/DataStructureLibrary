@@ -29,6 +29,6 @@ public:
 	
 };
 
-#include "HashNode.h"
+#include "HashNode.cpp"
 
 #endif // !HASHNODE_H
