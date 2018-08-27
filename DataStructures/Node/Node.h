@@ -39,6 +39,16 @@ public:
 	//		Base Functions
 	//--------------------------------------
 	void print();
+
+	//--------------------------------------
+	//		Operators
+	//--------------------------------------
+	bool operator==(Node&)const;
+	bool operator!=(Node&)const;
+	bool operator>=(Node&)const;
+	bool operator<=(Node&)const;
+	bool operator<(Node&)const;
+	bool operator>(Node&)const;
 };
 
 

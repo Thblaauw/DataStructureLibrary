@@ -18,15 +18,19 @@ public:
 	//---------------------------------
 	//		Key - Getters and Setters
 	//---------------------------------
-	Key& get_key();
+	const Key& get_key() const;
 	HashNode& set_key(const Key&);
 
 	//---------------------------------
 	//		Value - Getters and Setters
 	//---------------------------------
-	Value& get_value();
+	const Value& get_value() const;
 	HashNode& set_value(const Value&);
 	
+	//---------------------------------
+	//		Operators
+	//---------------------------------
+	bool operator==(const HashNode&)const;
 };
 
 #include "HashNode.cpp"

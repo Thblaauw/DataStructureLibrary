@@ -19,7 +19,7 @@ HashNode<Key, Value>::~HashNode() {
 	@return Key
 */
 template <class Key, class Value>
-Key& HashNode<Key, Value>::get_key() {
+const Key& HashNode<Key, Value>::get_key() const{
 	return *key;
 }
 /**
@@ -41,7 +41,7 @@ HashNode<Key, Value>& HashNode<Key, Value>::set_key(const Key& k) {
 	@return Value
 */
 template <class Key, class Value>
-Value& HashNode<Key, Value>::get_value() {
+const Value& HashNode<Key, Value>::get_value() const{
 	return *value;
 }
 
@@ -55,6 +55,17 @@ template <class Key, class Value>
 HashNode<Key, Value>& HashNode<Key, Value>::set_value(const Value& v) {
 	this->value = v;
 	return *(this);
+}
+
+/**
+	Compares the HashNode to another using only keys
+
+	@param Comparison HashNode
+	@return Boolean
+*/
+template <class Key, class Value>
+bool HashNode<Key, Value>::operator==(const HashNode<Key, Value>& b) const{
+	return this-> get_key() == b.get_key();
 }
 
 

@@ -15,15 +15,24 @@ protected:
 	Structure * table;
 
 public:
+	//---------------------------------------
+	//		Constructors and Destructors
+	//---------------------------------------
 	HashTable();
 	HashTable(int);
 	~HashTable();
 
+	//---------------------------------------
+	//		Base Functions
+	//---------------------------------------
 	HashTable& insert(const Key&, const Value&);
 	Value& get_value(const Key&);
 	HashTable& set_Value(const Key&, const Value&);
 	HashTable& remove(const Key&, const Value&);
 protected:
+	//---------------------------------------
+	//		Hashing Functions
+	//---------------------------------------
 	int hash_number(const Key&);
 	int hash(const int);
 	int hash(const char);

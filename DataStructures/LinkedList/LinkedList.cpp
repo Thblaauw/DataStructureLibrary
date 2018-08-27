@@ -133,7 +133,7 @@ Node<T>& LinkedList<T>::getNode(const T& data) {
 		else
 			iterator = iterator->getNextNode();
 	}
-	return NULL;
+	return *(new Node<T>);
 }
 
 /**

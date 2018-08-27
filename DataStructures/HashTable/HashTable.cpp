@@ -50,8 +50,10 @@ HashTable<Key, Value, Structure>& HashTable<Key, Value, Structure>::insert(const
 
 template <class Key, class Value, class Structure = LinkedList<HashNode<Key, Value>>>
 Value& HashTable<Key, Value, Structure>::get_value(const Key& k) {
-	Value v = table[hash(k)].getNode(k);
-	return v;
+	HashNode<Key, Value> n(k, *(new Value));
+	table[hash(k)].getNode(n);
+	char c = 'a';
+	return c;
 }
 
 //-----------------------------------------

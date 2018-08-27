@@ -5,39 +5,6 @@
   Node.cpp
   Rectangle.cpp
   Source.cpp
-e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashtable.cpp(53): error C2664: 'Node<T> &LinkedList<T>::getNode(const T &)': cannot convert argument 1 from 'const int' to 'const HashNode<Key,Value> &'
-          with
-          [
-              T=HashNode<int,char>
-          ]
-          and
-          [
-              Key=int,
-              Value=char
-          ]
-  e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashtable.cpp(53): note: Reason: cannot convert from 'const int' to 'const HashNode<Key,Value>'
-          with
-          [
-              Key=int,
-              Value=char
-          ]
-  e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashtable.cpp(53): note: No constructor could take the source type, or constructor overload resolution was ambiguous
-  e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashtable.cpp(52): note: while compiling class template member function 'char &HashTable<int,char,LinkedList<HashNode<Key,Value>>>::get_value(const Key &)'
-          with
-          [
-              Key=int,
-              Value=char
-          ]
-  e:\gitrepos\datastructure\datastructurelibrary\source.cpp(12): note: see reference to function template instantiation 'char &HashTable<int,char,LinkedList<HashNode<Key,Value>>>::get_value(const Key &)' being compiled
-          with
-          [
-              Key=int,
-              Value=char
-          ]
-  e:\gitrepos\datastructure\datastructurelibrary\source.cpp(10): note: see reference to class template instantiation 'HashTable<int,char,LinkedList<HashNode<Key,Value>>>' being compiled
-          with
-          [
-              Key=int,
-              Value=char
-          ]
   Generating Code...
+e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashtable.cpp(56): warning C4172: returning address of local variable or temporary: c
+  DataStructureLibrary.vcxproj -> E:\GitRepos\DataStructure\DataStructureLibrary\Debug\DataStructureLibrary.exe

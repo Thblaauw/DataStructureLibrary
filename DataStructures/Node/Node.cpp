@@ -117,4 +117,34 @@ void Node<T>::print() {
 	this->data->printRectangle();
 }
 
+template<class T>
+bool Node<T>::operator==(Node<T>& b) const {
+	return this->data == b.getData();
+}
+
+template<class T>
+bool Node<T>::operator!=(Node<T>& b) const {
+	return this->data != b.getData();
+}
+
+template<class T>
+bool Node<T>::operator>(Node<T>& b) const {
+	return this->data > b.getData();
+}
+
+template<class T>
+bool Node<T>::operator<(Node<T>& b) const {
+	return this->data < b.getData();
+}
+
+
+template<class T>
+bool Node<T>::operator>=(Node<T>& b) const {
+	return this->data >= b.getData();
+}
+
+template<class T>
+bool Node<T>::operator<=(Node<T>& b) const {
+	return this->data <= b.getData();
+}
 #endif
