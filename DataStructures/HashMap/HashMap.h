@@ -27,8 +27,8 @@ public:
 	//---------------------------------------
 	HashMap& insert(const Key&, const Value&);
 	Value& get_value(const Key&);
-	HashMap& set_Value(const Key&, const Value&);
-	HashMap& remove(const Key&, const Value&);
+	HashMap& set_value(const Key&, const Value&);
+	HashMap& remove(const Key&);
 protected:
 	//---------------------------------------
 	//		Hashing Functions

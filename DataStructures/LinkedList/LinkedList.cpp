@@ -126,7 +126,7 @@ LinkedList<T>& LinkedList<T>::remove(const T& data) {
 template<class T>
 Node<T>& LinkedList<T>::getNode(const T& data) {
 	Node<T> *iterator = head;
-	while (iterator != nullptr || iterator->getData() == data) {
+	while (iterator != nullptr) {
 		if (iterator->getData() == data) {
 			return *iterator;
 		}

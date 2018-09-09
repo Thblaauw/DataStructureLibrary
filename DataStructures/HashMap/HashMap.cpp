@@ -48,12 +48,25 @@ HashMap<Key, Value, Structure>& HashMap<Key, Value, Structure>::insert(const Key
 	return *(this);
 }
 
+/**
+	Returns the value associated with the key
+
+	@param Key
+	@return Value
+*/
 template <class Key, class Value, class Structure = LinkedList<HashNode<Key, Value>>>
 Value& HashMap<Key, Value, Structure>::get_value(const Key& k) {
 	HashNode<Key, Value> n(k, *(new Value));
-	table[hash(k)].getNode(n);
-	char c = 'a';
+	//return table[hash(k)].getNode(n).getData().get_value();
+	Value c = table[hash(k)].getNode(n).getData().get_value();
 	return c;
+}
+
+template <class Key, class Value, class Structure = LinkedList<HashNode<Key, Value>>>
+HashMap<Key, Value, Structure>& HashMap<Key, Value, Structure>::set_value(const Key& k, const Value& v) {
+	HashNode<Key, Value> *n = new HashNode<Key, Value>(k, v);
+	table[hash(k)].getNode(*n).getData().set_value(v);
+	return *(this);
 }
 
 //-----------------------------------------
@@ -63,7 +76,7 @@ Value& HashMap<Key, Value, Structure>::get_value(const Key& k) {
 /*
 	This library contains basic hashing functions for basic data types
 	and strings. If you want to use one of your custom classes as a "Key",
-	you willneed to create the hash function of that class to return an Integer
+	you will need to create the hash function of that class to return an Integer
 */
 
 /**

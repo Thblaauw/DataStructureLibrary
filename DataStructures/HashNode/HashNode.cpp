@@ -9,8 +9,8 @@ HashNode<Key, Value>::HashNode(const Key& k, const Value& v): key(&k), value(&v)
 
 template <class Key, class Value>
 HashNode<Key, Value>::~HashNode() {
-	delete key;
-	delete value;
+	//delete key;
+	//delete value;
 }
 /**
 	Returns by reference the key
@@ -53,7 +53,7 @@ const Value& HashNode<Key, Value>::get_value() const{
 */
 template <class Key, class Value>
 HashNode<Key, Value>& HashNode<Key, Value>::set_value(const Value& v) {
-	this->value = v;
+	this->value = &v;
 	return *(this);
 }
 

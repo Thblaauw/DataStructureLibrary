@@ -111,8 +111,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures\BinaryTree\BInaryTree.cpp" />
+    <ClCompile Include="DataStructures\HashMap\HashMap.cpp" />
     <ClCompile Include="DataStructures\HashNode\HashNode.cpp" />
-    <ClCompile Include="DataStructures\HashTable\HashMap.cpp" />
     <ClCompile Include="DataStructures\LinkedList\LinkedList.cpp" />
     <ClCompile Include="DataStructures\Node\Node.cpp" />
     <ClCompile Include="Rectangle.cpp" />
@@ -120,8 +120,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructures\BinaryTree\BinaryTree.h" />
+    <ClInclude Include="DataStructures\HashMap\HashMap.h" />
     <ClInclude Include="DataStructures\HashNode\HashNode.h" />
-    <ClInclude Include="DataStructures\HashTable\HashMap.h" />
     <ClInclude Include="DataStructures\LinkedList\LinkedList.h" />
     <ClInclude Include="DataStructures\Node\Node.h" />
     <ClInclude Include="Rectangle.h" />
