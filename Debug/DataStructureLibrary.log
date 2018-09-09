@@ -1,10 +1,10 @@
 ﻿  BInaryTree.cpp
   HashNode.cpp
-  HashTable.cpp
+  HashMap.cpp
   LinkedList.cpp
   Node.cpp
   Rectangle.cpp
   Source.cpp
   Generating Code...
-e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashtable.cpp(56): warning C4172: returning address of local variable or temporary: c
+e:\gitrepos\datastructure\datastructurelibrary\datastructures\hashtable\hashmap.cpp(56): warning C4172: returning address of local variable or temporary: c
   DataStructureLibrary.vcxproj -> E:\GitRepos\DataStructure\DataStructureLibrary\Debug\DataStructureLibrary.exe
